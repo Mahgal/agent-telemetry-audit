@@ -1,0 +1,10 @@
+privacy
+telemetry
+claude-code
+cursor
+vscode
+developer-tools
+cli
+python
+audit
+ai-agents

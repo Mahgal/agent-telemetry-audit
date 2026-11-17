@@ -1,0 +1,17 @@
+agent-telemetry-audit 1.0.0 — auditing ~
+Tool               | Telemetry     | Evidence                                                              | How to disable                                                                                
+-------------------+---------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------------------------------
+Claude Code        | NOT_INSTALLED | not found: ~/.claude.json, ~/.claude/settings.json                    | Not installed — nothing to disable.                                                           
+Cursor             | ON            | ~/.config/Cursor/User/settings.json: telemetry.telemetryLevel = "all" | Set in ~/.config/Cursor/User/settings.json: /   "telemetry.telemetryLevel": "off"             
+VS Code            | OFF           | ~/.config/Code/User/settings.json: telemetry.telemetryLevel = "off"   | Already off.                                                                                  
+Codex              | NOT_INSTALLED | not found: ~/.codex/config.toml                                       | Not installed — nothing to disable.                                                           
+Gemini CLI         | OFF           | ~/.gemini/settings.json: telemetry.enabled = false                    | Already off. Also set telemetry.logPrompts = false if you ever enable telemetry.              
+OpenCode           | NOT_INSTALLED | not found: ~/.config/opencode/opencode.json                           | Not installed — nothing to disable.                                                           
+DO_NOT_TRACK (env) | UNKNOWN       | environment: DO_NOT_TRACK not set                                     | export DO_NOT_TRACK=1 in your shell profile — Claude Code, Codex and other CLI tools honor it.
+
+Other flags in Cursor: telemetry.telemetryLevel = "all"; telemetry.enableCrashReporter = true
+Other flags in VS Code: telemetry.enableTelemetry = false; telemetry.telemetryLevel = "off"
+Other flags in Gemini CLI: telemetry.enabled = false; telemetry.logPrompts = true
+
+Summary: 1 ON · 2 OFF · 1 UNKNOWN · 3 NOT_INSTALLED
+This tool reads config files only. It never edits them, and it cannot check the Windows 11 OS-level telemetry (see README).

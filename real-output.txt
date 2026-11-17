@@ -1,0 +1,13 @@
+agent-telemetry-audit 1.0.0 — auditing /home/hatch
+Tool               | Telemetry     | Evidence                                           | How to disable                                                                                
+-------------------+---------------+----------------------------------------------------+-----------------------------------------------------------------------------------------------
+Claude Code        | NOT_INSTALLED | not found: ~/.claude.json, ~/.claude/settings.json | Not installed — nothing to disable.                                                           
+Cursor             | NOT_INSTALLED | not found: ~/.config/Cursor/User/settings.json     | Not installed — nothing to disable.                                                           
+VS Code            | NOT_INSTALLED | not found: ~/.config/Code/User/settings.json       | Not installed — nothing to disable.                                                           
+Codex              | NOT_INSTALLED | not found: ~/.codex/config.toml                    | Not installed — nothing to disable.                                                           
+Gemini CLI         | NOT_INSTALLED | not found: ~/.gemini/settings.json                 | Not installed — nothing to disable.                                                           
+OpenCode           | NOT_INSTALLED | not found: ~/.config/opencode/opencode.json        | Not installed — nothing to disable.                                                           
+DO_NOT_TRACK (env) | UNKNOWN       | environment: DO_NOT_TRACK not set                  | export DO_NOT_TRACK=1 in your shell profile — Claude Code, Codex and other CLI tools honor it.
+
+Summary: 0 ON · 0 OFF · 1 UNKNOWN · 6 NOT_INSTALLED
+This tool reads config files only. It never edits them, and it cannot check the Windows 11 OS-level telemetry (see README).

@@ -1,0 +1,6 @@
+{
+  // Cursor: telemetry ON (default level "all"), crash reporter on too
+  "telemetry.telemetryLevel": "all",
+  "telemetry.enableCrashReporter": true,
+  "editor.fontSize": 14
+}
